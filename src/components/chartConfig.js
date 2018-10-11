@@ -1,303 +1,42 @@
 export default {
   chartConfig: {
-    noDataMessage: function noDataMessage() {
-      return "error, no data";
-    },
-    categoriesTitle: "Month",
-    xLabelsResponsiveness: [
-      {
-        extendTicks: function extendTicks() {
-          return { value: true };
-        },
-        truncateLabels: function truncateLabels() {
-          return { value: 3, consistent: true };
-        },
-        hideLabels: function hideLabels() {
-          return {};
-        }
-      },
-      {
-        minWidth: 600,
-        truncateLabels: function truncateLabels(
-          _primaryAxisLabels,
-          _secondaryAxisLabels
-        ) {
-          return { value: 3, consistent: true };
-        }
-      }
-    ],
-    separators: {
-      decimal: "~"
-    },
-    dataLabelsDecimals: 2,
-    valuesAxesDecimals: 2,
-    primaryValuesAxis: {
-      decimals: 3
-    },
-    secondaryValuesAxis: {
-      decimals: 4
-    },
-    primaryValuesTitle: "Fahrenheit",
-    secondaryValuesTitle: "Something else",
-    forecastStart: "September",
-    gridlines: true,
-    background: "#f0f0f0",
-    legend: {
-      visible: true,
-      margin: {
-        right: 30
-      }
-    },
     series: [
       {
-        name: "Sth",
+        name: "Average Weather Conditions Palma de Mallorca (F)",
+        valueKey: "airF",
         data: [
-          {
-            data: 32,
-            temp: 23,
-            month: "January"
-          },
-          {
-            data: -38,
-            temp: -21,
-            month: "February"
-          },
-          {
-            data: 47,
-            temp: 32,
-            month: "March"
-          },
-          {
-            data: -59,
-            temp: -43,
-            month: "April"
-          },
-          {
-            data: 70,
-            temp: 45,
-            month: "May"
-          },
-          {
-            data: 80,
-            temp: 65,
-            month: "June"
-          },
-          {
-            data: 88,
-            temp: 36,
-            month: "July"
-          },
-          {
-            data: 83,
-            temp: 75,
-            month: "August"
-          },
-          {
-            data: 76,
-            temp: 76,
-            month: "September"
-          },
-          {
-            data: 64,
-            temp: 32,
-            month: "October"
-          },
-          {
-            data: 49,
-            temp: 12,
-            month: "November"
-          },
-          {
-            data: 37,
-            temp: 33,
-            month: "December"
-          }
+          { month: "Jan", airC: 16, airF: 61, highAirC: 15, highAirF: 59, lowC: 5, lowF: 41, rainMM: 50, rainD: 11, sunH: 5, seaC: 15, seaF: 59},
+          { month: "Feb", airC: 15, airF: 59, highAirC: 15, highAirF: 59, lowC: 5, lowF: 41, rainMM: 40, rainD: 8, sunH: 7, seaC: 15, seaF: 59},
+          { month: "Mar", airC: 15, airF: 59, highAirC: 17, highAirF: 63, lowC: 6, lowF: 43, rainMM: 40, rainD: 8, sunH: 7, seaC: 15, seaF: 59},
+          { month: "Apr", airC: 16, airF: 61, highAirC: 19, highAirF: 66, lowC: 7, lowF: 45, rainMM: 50, rainD: 9, sunH: 9, seaC: 16, seaF: 61},
+          { month: "May", airC: 18, airF: 64, highAirC: 23, highAirF: 73, lowC: 10, lowF: 50, rainMM: 30, rainD: 7, sunH: 9, seaC: 18, seaF: 64},
+          { month: "Jun", airC: 22, airF: 72, highAirC: 27, highAirF: 81, lowC: 15, lowF: 59, rainMM: 20, rainD: 5, sunH: 11, seaC: 21, seaF: 70},
+          { month: "Jul", airC: 22, airF: 72, highAirC: 31, highAirF: 88, lowC: 17, lowF: 63, rainMM: 10, rainD: 3, sunH: 11, seaC: 24, seaF: 75},
+          { month: "Aug", airC: 24, airF: 75, highAirC: 31, highAirF: 88, lowC: 18, lowF: 64, rainMM: 10, rainD: 4, sunH: 10, seaC: 26, seaF: 79},
+          { month: "Sep", airC: 25, airF: 77, highAirC: 28, highAirF: 82, lowC: 16, lowF: 61, rainMM: 40, rainD: 8, sunH: 7, seaC: 25, seaF: 77},
+          { month: "Oct", airC: 23, airF: 73, highAirC: 24, highAirF: 75, lowC: 13, lowF: 55, rainMM: 70, rainD: 11, sunH: 7, seaC: 22, seaF: 72},
+          { month: "Nov", airC: 19, airF: 66, highAirC: 19, highAirF: 66, lowC: 8, lowF: 46, rainMM: 50, rainD: 12, sunH: 6, seaC: 19, seaF: 66},
+          { month: "Dec", airC: 16, airF: 61, highAirC: 16, highAirF: 61, lowC: 6, lowF: 43, rainMM: 40, rainD: 12, sunH: 5, seaC: 17, seaF: 63}
         ],
-        type: "bar",
-        valueKey: "temp",
-        order: 2
       },
       {
-        name: "group 1",
-        stacked: true,
-        overlapping: 30,
-        overlappingType: "percentsPrevious",
-        order: 1,
-        series: [
-          {
-            name: "Sth else",
-            data: [
-              {
-                temp: 12.1,
-                month: "January"
-              },
-              {
-                temp: -38,
-                month: "February"
-              },
-              {
-                temp: 57,
-                month: "March"
-              },
-              {
-                temp: -25,
-                month: "April"
-              },
-              {
-                temp: 40,
-                month: "May"
-              },
-              {
-                temp: 12,
-                month: "June"
-              },
-              {
-                temp: 42,
-                month: "July"
-              },
-              {
-                temp: 43,
-                month: "August"
-              },
-              {
-                temp: 16,
-                month: "September"
-              },
-              {
-                temp: 84,
-                month: "October"
-              },
-              {
-                temp: 30,
-                month: "November"
-              },
-              {
-                temp: 0,
-                month: "December"
-              }
-            ],
-            neutralInterval: [-4, 40],
-            type: "bar",
-            size: 20,
-            dataColor: {
-              colors: ["blue", "#ffc0cb", "yellow"]
-            }
-          },
-          {
-            name: "Misc.",
-            data: [
-              {
-                temp: 22.1,
-                month: "January"
-              },
-              {
-                temp: -18,
-                month: "February"
-              },
-              {
-                temp: 27,
-                month: "March"
-              },
-              {
-                temp: -45,
-                month: "April"
-              },
-              {
-                temp: 10,
-                month: "June"
-              },
-              {
-                temp: 72,
-                month: "July"
-              },
-              {
-                temp: 53,
-                month: "August"
-              },
-              {
-                temp: 36,
-                month: "September"
-              },
-              {
-                temp: 64,
-                month: "October"
-              },
-              {
-                temp: 30,
-                month: "November"
-              },
-              {
-                temp: 37,
-                month: "December"
-              }
-            ],
-            type: "bar",
-            size: 40
-          },
-          {
-            name: "Rand",
-            data: [
-              {
-                temp: 1200.1,
-                month: "January"
-              },
-              {
-                temp: -380.1,
-                month: "February"
-              },
-              {
-                temp: 570,
-                month: "March"
-              },
-              {
-                temp: -250,
-                month: "April"
-              },
-              {
-                temp: 400,
-                month: "May"
-              },
-              {
-                temp: 120,
-                month: "June"
-              },
-              {
-                temp: 820,
-                month: "July"
-              },
-              {
-                temp: -530,
-                month: "August"
-              },
-              {
-                temp: 160,
-                month: "September"
-              },
-              {
-                temp: 840,
-                month: "October"
-              },
-              {
-                temp: 300,
-                month: "November"
-              },
-              {
-                temp: 0,
-                month: "December"
-              }
-            ],
-            type: "line",
-            size: 10,
-            cut: 400,
-            dataLabels: {
-              visible: true,
-              decimals: 2
-            },
-            assignTo: "secondary",
-            dataColor: "#d742f4"
-          }
-        ]
+        name: "Average Weather Conditions Palma de Mallorca (C)",
+        valueKey: "airC",
+        data: [
+          { month: "Jan", airC: 16, airF: 61, highAirC: 15, highAirF: 59, lowC: 5, lowF: 41, rainMM: 50, rainD: 11, sunH: 5, seaC: 15, seaF: 59},
+          { month: "Feb", airC: 15, airF: 59, highAirC: 15, highAirF: 59, lowC: 5, lowF: 41, rainMM: 40, rainD: 8, sunH: 7, seaC: 15, seaF: 59},
+          { month: "Mar", airC: 15, airF: 59, highAirC: 17, highAirF: 63, lowC: 6, lowF: 43, rainMM: 40, rainD: 8, sunH: 7, seaC: 15, seaF: 59},
+          { month: "Apr", airC: 16, airF: 61, highAirC: 19, highAirF: 66, lowC: 7, lowF: 45, rainMM: 50, rainD: 9, sunH: 9, seaC: 16, seaF: 61},
+          { month: "May", airC: 18, airF: 64, highAirC: 23, highAirF: 73, lowC: 10, lowF: 50, rainMM: 30, rainD: 7, sunH: 9, seaC: 18, seaF: 64},
+          { month: "Jun", airC: 22, airF: 72, highAirC: 27, highAirF: 81, lowC: 15, lowF: 59, rainMM: 20, rainD: 5, sunH: 11, seaC: 21, seaF: 70},
+          { month: "Jul", airC: 22, airF: 72, highAirC: 31, highAirF: 88, lowC: 17, lowF: 63, rainMM: 10, rainD: 3, sunH: 11, seaC: 24, seaF: 75},
+          { month: "Aug", airC: 24, airF: 75, highAirC: 31, highAirF: 88, lowC: 18, lowF: 64, rainMM: 10, rainD: 4, sunH: 10, seaC: 26, seaF: 79},
+          { month: "Sep", airC: 25, airF: 77, highAirC: 28, highAirF: 82, lowC: 16, lowF: 61, rainMM: 40, rainD: 8, sunH: 7, seaC: 25, seaF: 77},
+          { month: "Oct", airC: 23, airF: 73, highAirC: 24, highAirF: 75, lowC: 13, lowF: 55, rainMM: 70, rainD: 11, sunH: 7, seaC: 22, seaF: 72},
+          { month: "Nov", airC: 19, airF: 66, highAirC: 19, highAirF: 66, lowC: 8, lowF: 46, rainMM: 50, rainD: 12, sunH: 6, seaC: 19, seaF: 66},
+          { month: "Dec", airC: 16, airF: 61, highAirC: 16, highAirF: 61, lowC: 6, lowF: 43, rainMM: 40, rainD: 12, sunH: 5, seaC: 17, seaF: 63}
+        ],
       }
-    ],
+    ]
   }
 };

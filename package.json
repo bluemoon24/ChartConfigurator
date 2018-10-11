@@ -8,8 +8,15 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "d3": "^5.7.0",
+    "futil": "^1.55.0",
+    "lodash": "^4.17.11",
+    "markdown": "^0.5.0",
+    "roi-charts": "git+ssh://git@github.com/skygate/bayer-roi.git",
+    "touch-emulator": "^1.0.0",
     "vue": "^2.5.17",
     "vue-color": "^2.6.0",
+    "vue-router": "^3.0.1",
     "vuetify": "^1.0.19"
   },
   "devDependencies": {
