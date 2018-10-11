@@ -176,7 +176,7 @@ export default {
       else if (optype.includes('boolean')) eltype = 'v-switch'
       // else if (optype.includes('array')) eltype = 'tree-panel'
       else eltype = 'v-text-field'
-      if (option !== 'series') return eltype
+      if (option !== 'series') return {el:eltype, props: {hint: doc ? `${doc.type} - ${doc.help}` : '', label: option, persistentHint: true}}
 
       let el = []
       for (let i = 0; i < obj[option].length; i++)
@@ -190,7 +190,7 @@ export default {
           }
         }, [`${option}: ${obj[option]}`]))
         // console.log('uitype returned for series', el)
-      return el
+      return {el:el}
     },
 
     onScroll (e) {

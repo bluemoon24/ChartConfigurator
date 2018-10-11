@@ -74,11 +74,11 @@ import TreePanel from '@/components/TreePanel'
           else {
             let vm = this
             let ele = this.uitype(subtree, opt)
-            // console.log('type of uitype return', typeof ele)
-            if (typeof ele !== 'string')
-              options.push(ele)
+            // console.log('type of uitype return', ele, typeof ele.el)
+            if (typeof ele.el !== 'string')
+              options.push(ele.el)
             else {
-              options.push(this.$createElement(ele, {
+              options.push(this.$createElement(ele.el, {
                 on: {
                   input: function(event) {
                     // console.log('input event', event, vm)
@@ -92,14 +92,14 @@ import TreePanel from '@/components/TreePanel'
                   }
                 },
                 props: {
-                  label: opt,
+                  ...ele.props,
                   value: subtree[opt]
                 }
               }, [`${opt}: ${subtree[opt]}`]))
             }
           }
         }
-        // // console.log('treepanel options', options)
+        // console.log('treepanel options', options)
         return options
       },
 
