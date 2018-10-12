@@ -36,6 +36,7 @@ The toplevel keys of this object are created from the respective (.md)-filenames
 
 ### ToDos
 - Support functional options (delegates)
+- Support other chart types: SmallMultiples, Sankey, etc.
 - Make the `textarea` field of the config editable (currently I don't see a need for this)
 
 ### Known bugs
