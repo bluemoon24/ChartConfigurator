@@ -12,7 +12,7 @@
     "futil": "^1.55.0",
     "lodash": "^4.17.11",
     "markdown": "^0.5.0",
-    "roi-charts": "git+ssh://git@github.com/skygate/bayer-roi.git",
+    "roi-charts": "git+ssh://git@bayer.githost.io:data_architecture/bayer-roi-charts.git",
     "touch-emulator": "^1.0.0",
     "vue": "^2.5.17",
     "vue-color": "^2.6.0",
