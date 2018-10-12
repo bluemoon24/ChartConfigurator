@@ -35,7 +35,10 @@ The created file looks like this:
 The toplevel keys of this object are created from the respective (.md)-filenames and have been camel cased for compilations. Actually these are currently not used, but could serve as grouping structure for UI controls in the future.
 
 ### ToDos
-- Support functional options (delegates)
+- Make chart resizable
+- Use color picker controls where appropriate
+- Use drop down controls for `enum`-like Arrays (but how do we know the list?)
+- Support functional options, like e.g. delegates (use `eval` on text?)
 - Support other chart types: SmallMultiples, Sankey, etc.
 - Make the `textarea` field of the config editable (currently I don't see a need for this)
 
