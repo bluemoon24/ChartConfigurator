@@ -65,7 +65,7 @@ import config from '@/components/chartConfig'
 import docs from '@/components/OptionsDoc'
 import SeriesConfig from '@/components/SeriesConfig'
 import TreePanel from '@/components/TreePanel'
-import * as d3 from 'd3'
+// import * as d3 from 'd3'
 import Vue from 'vue'
 import { Chrome } from 'vue-color'
 export default {

@@ -1,12 +1,15 @@
 #!/usr/bin/perl
+    use File::Basename;
     $regexp = '^\s*-\s*\*\*(.+)\*\*.+_\((.+)\)\_\s-?\s([^<\n]+)';
     use Data::Dumper;
     %sections;
     while (<>) {
       if (/$regexp/) {
         @parts = ($1, $2, $3);
-        @sec = split(/\./,$ARGV);
-        $sect = @sec[0] =~ s/-([a-z])/uc($1)/rge;
+        @sec = split(/\./,basename($ARGV));
+        # @fname = split(/\//,@sec[0]); # split path
+        # print $ARGV, @fname[-1], "\n"; #last element fo file path
+        $sect = @sec[0] =~ s/-([a-z])/uc($1)/rge; #convert to CamelCase
         next if @parts[0] =~ /width|height|container/;
         @parts[2] =~ s/(["`])/\\$1/g;
         $sections{ $sect }{ @parts[0] } = "{ type: \"@parts[1]\", help: \"@parts[2]\" }";
